@@ -22,9 +22,10 @@ const (
 	ASSIGN = "="
 	PLUS   = "+"
 	SUB    = "-"
-	MUL    = "*"
-	DIV    = "/"
-	EQUAL  = "=="
+	ASTERICK    = "*"
+	SLASH    = "/"
+	BANG = "!"
+	
 
 	//Dellimiters
 	COMMA     = ","
@@ -36,8 +37,8 @@ const (
 	RBRACE    = "}"
 	LPAREN    = "("
 	RPAREN = ")"
-	GREATER = ">"
-	LESSER = ">"
+	GT = ">"
+	LT = ">"
 
 
 	//keywords- words that have a preserved meaning around them and can't be used as variables
