@@ -1,4 +1,4 @@
-package main
+package token
 
 // allows us to differenciate between various types of tokens used
 type TokenType string
@@ -19,15 +19,14 @@ const (
 	BOOLEAN = "BOOLEAN"
 
 	// operators
-	ASSIGN = "="
-	PLUS   = "+"
-	SUB    = "-"
-	ASTERICK    = "*"
+	ASSIGN   = "="
+	PLUS     = "+"
+	SUB      = "-"
+	ASTERICK = "*"
 	SLASH    = "/"
-	BANG = "!"
-	
+	BANG     = "!"
 
-	//Dellimiters
+	// Dellimiters
 	COMMA     = ","
 	SEMICOLON = ";"
 	COLON     = ":"
@@ -36,48 +35,45 @@ const (
 	LBRACE    = "{"
 	RBRACE    = "}"
 	LPAREN    = "("
-	RPAREN = ")"
-	GT = ">"
-	LT = ">"
+	RPAREN    = ")"
+	GT        = ">"
+	LT        = "<"
 
-
-	//keywords- words that have a preserved meaning around them and can't be used as variables
-	FUNCTION ="FUNCTION"
-	LET="LET"
+	// keywords- words that have a preserved meaning around them and can't be used as variables
+	FUNCTION  = "FUNCTION"
+	LET       = "LET"
 	STRUCTURE = "STRUCTURE"
-	IF = "IF"
-	ELSE = "ELSE"
-	FOR = "FOR"
-	WHILE = "WHILE"
-	RETURN = "RETURN"
-	DO = "DO"
-	RANGE = "RANGE"
+	IF        = "IF"
+	ELSE      = "ELSE"
+	FOR       = "FOR"
+	WHILE     = "WHILE"
+	RETURN    = "RETURN"
+	DO        = "DO"
+	RANGE     = "RANGE"
 )
 
-
-/*This variable maps the various token we have declared above to what we would like to call them,
+/*
+This variable maps the various token we have declared above to what we would like to call them,
 essetially you can see the difference as per the strings we've choosen to use.
 Example 'else' is 'el', 'return' is 'output', 'func' is 'funct'
 We are free to make as much changes as we would like so long as we can remember while using them. ;)
 */
-	var keywords = map[string]TokenType{
-		"funct" : FUNCTION,
-		"let" : LET,
-		"struct" : STRUCTURE,
-		"if" : IF,
-		"el" : ELSE,
-		"for" : FOR,
-		"while" : WHILE,
-		"output" : RETURN,
-		"do" : DO,
-		"btwn" : RANGE,
-		
-	}
-
-	func LookIdentity(id string) TokenType {
-if token, OK := keywords[id]; OK{
-	return token
+var keywords = map[string]TokenType{
+	"funct":   FUNCTION,
+	"let":     LET,
+	"struct":  STRUCTURE,
+	"if":      IF,
+	"el":      ELSE,
+	"for":     FOR,
+	"while":   WHILE,
+	"output":  RETURN,
+	"do":      DO,
+	"through": RANGE,
 }
-return IDENT
-	}
 
+func LookIdentity(id string) TokenType {
+	if tokentype, ok := keywords[id]; ok {
+		return tokentype
+	}
+	return IDENT
+}
