@@ -37,7 +37,7 @@ const (
 	LPAREN    = "LPAREN"
 	RPAREN    = "RPAREN"
 	GT        = "GT"
-	LT
+	LT        = "LT"
 
 	// keywords- words that have a preserved meaning around them and can't be used as variables
 	FUNCTION  = "FUNCTION"
