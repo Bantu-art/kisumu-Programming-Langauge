@@ -63,7 +63,10 @@ func (lex *Lexer) ReadDigit() string {
 
 // newToken generates a new token
 func newToken(tokenType token.TokenType, ch byte) token.Token {
-	return token.Token{Type: tokenType, Literal: string(ch)}
+	return token.Token{
+		Type:    tokenType,  // This should be the type (e.g., token.PLUS)
+		Literal: string(ch), // This should be the actual character (e.g., "+")
+	}
 }
 
 func (lex *Lexer) NextToken() token.Token {

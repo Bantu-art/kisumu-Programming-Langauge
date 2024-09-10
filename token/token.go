@@ -13,31 +13,31 @@ const (
 	ILLEGAL = "ILLEGAL"
 	EOF     = "EOF" // End Of File
 
-	IDENT   = "IDENT" // identifier i.e add(basically function names)
-	INT     = "INT"   // the rest are literals
+	IDENT   = "IDENT" // identifier (e.g., function names like "add")
+	INT     = "INT"   // integer literals
 	STRING  = "STRING"
 	BOOLEAN = "BOOLEAN"
 
-	// operators
-	ASSIGN   = "="
-	PLUS     = "+"
-	SUB      = "-"
-	ASTERICK = "*"
-	SLASH    = "/"
-	BANG     = "!"
+	// Operators
+	ASSIGN   = "ASSIGN"
+	PLUS     = "PLUS"
+	SUB      = "SUB"
+	ASTERICK = "ASTERICK"
+	SLASH    = "SLASH"
+	BANG     = "BANG"
 
-	// Dellimiters
-	COMMA     = ","
-	SEMICOLON = ";"
-	COLON     = ":"
-	LBRACKET  = "["
-	RBRACKET  = "]"
-	LBRACE    = "{"
-	RBRACE    = "}"
-	LPAREN    = "("
-	RPAREN    = ")"
-	GT        = ">"
-	LT        = "<"
+	// Delimiters
+	COMMA     = "COMMA"
+	SEMICOLON = "SEMICOLON"
+	COLON     = "COLON"
+	LBRACKET  = "LBRACKET"
+	RBRACKET  = "RBRACKET"
+	LBRACE    = "LBRACE"
+	RBRACE    = "RBRACE"
+	LPAREN    = "LPAREN"
+	RPAREN    = "RPAREN"
+	GT        = "GT"
+	LT
 
 	// keywords- words that have a preserved meaning around them and can't be used as variables
 	FUNCTION  = "FUNCTION"
@@ -77,3 +77,4 @@ func LookIdentity(id string) TokenType {
 	}
 	return IDENT
 }
+
